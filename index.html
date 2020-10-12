@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <base href="">
+    <title>Title</title>
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="description">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="192x192" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#dbe6f2">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
+    <link rel="preconnect" href="">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container"><a class="logo" href="./">
+          <svg class="icon icon-logo ">
+            <use xlink:href="img/sprite/sprite.svg#logo"></use>
+          </svg></a>
+        <button class="burger"><span></span><span></span><span></span></button>
+        <nav class="header__nav">
+          <ul class="header-menu">
+            <li class="header-menu__item"><a href="#">About</a></li>
+            <li class="header-menu__item header-menu__item_toggle"> <span>Help</span>
+              <svg class="icon icon-arrow-open ">
+                <use xlink:href="img/sprite/sprite.svg#arrow-open"></use>
+              </svg>
+              <ul class="header-submenu">
+                <li class="header-submenu__item"><a href="#">User Guide</a></li>
+                <li class="header-submenu__item"><a href="#">Contact Support</a></li>
+              </ul>
+            </li>
+            <li class="header-menu__item"><a href="">Features</a></li>
+          </ul>
+          <button class="btn btn_second header__btn">Sign Up</button>
+        </nav>
+      </div>
+    </header>
+    <main class="index">
+      <section class="futures">
+        <div class="container">
+          <h1 class="futures__title">Features</h1>
+          <p class="futures__text">Some of the features and advantages that we provide for those of you who store data in this Data Warehouse.</p>
+        </div>
+        <div class="futures-slider">
+          <div class="futures-slider-item">
+            <div class="futures-slider-item__content">
+              <h3>First Feature</h3>
+              <p>Little Red Cap opened her eyes and when she saw the sunbeams dancing to and fro through the trees and how the ground was covered with beautiful flowers.</p><a class="futures-slider-item__btn" href="#">Learn more
+                <svg class="icon icon-arrow-link ">
+                  <use xlink:href="img/sprite/sprite.svg#arrow-link"></use>
+                </svg></a>
+            </div>
+          </div>
+          <div class="futures-slider-item">
+            <div class="futures-slider-item__content">
+              <h3>Second Feature</h3>
+              <p>Little Red Cap opened her eyes and when she saw the sunbeams dancing to and fro through the trees and how the ground was covered with beautiful flowers.</p><a class="futures-slider-item__btn" href="#">Learn more
+                <svg class="icon icon-arrow-link ">
+                  <use xlink:href="img/sprite/sprite.svg#arrow-link"></use>
+                </svg></a>
+            </div>
+          </div>
+          <div class="futures-slider-item">
+            <div class="futures-slider-item__content">
+              <h3>Third Feature</h3>
+              <p>Little Red Cap opened her eyes and when she saw the sunbeams dancing to and fro through the trees and how the ground was covered with beautiful flowers.</p><a class="futures-slider-item__btn" href="#">Learn more
+                <svg class="icon icon-arrow-link ">
+                  <use xlink:href="img/sprite/sprite.svg#arrow-link"></use>
+                </svg></a>
+            </div>
+          </div>
+          <div class="futures-slider-item futures-slider-item_mark-new">
+            <div class="futures-slider-item__content">
+              <h3>Fourth Feature</h3>
+              <p>Little Red Cap had run after the flowers. After she had gathered so many that she could not carry any more, she remembered her grandmother.</p><a class="futures-slider-item__btn" href="#">Learn more
+                <svg class="icon icon-arrow-link ">
+                  <use xlink:href="img/sprite/sprite.svg#arrow-link"></use>
+                </svg></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container footer__wrapper"><a class="logo footer__logo">
+          <svg class="icon icon-logo-white ">
+            <use xlink:href="img/sprite/sprite.svg#logo-white"></use>
+          </svg></a>
+        <ul class="footer__list">
+          <li><a class="footer-list__link" href="#">About Us</a></li>
+          <li><a class="footer-list__link" href="#">Privacy Policy</a></li>
+        </ul>
+        <form class="form" action="" method="POST">
+          <input class="form__input" type="email" name="email" placeholder="Enter your email">
+          <button class="btn form__btn" type="submit">Sign Up Now</button>
+        </form>
+      </div>
+    </footer>
+    <div class="pages" id="pages-22">
+      <div class="pages-header" id="toogle-23">
+        <p>Навигация страниц верстки</p><span>GP</span><i class="icon-pages" id="close-24"></i>
+      </div>
+    </div>
+    <script>
+      var pages = {
+        'ГЛАВНАЯ': './',
+        'UI': 'ui.html',
+      };
+      createList(pages);
+
+            var pagesHeader = document.querySelector('#toogle-23');
+      pagesHeader.addEventListener('click', function (event) {
+        event.preventDefault();
+        document.querySelector('#pages-22').classList.toggle('open');
+      });
+
+            function createList(pages) {
+        var ulElement = document.createElement('UL');
+        for (var key in pages) {
+          var liElement = document.createElement('LI');
+          liElement.innerHTML = `<a href="${pages[key]}">${key}</a>`;
+          ulElement.appendChild(liElement);
+        }
+        document.querySelector('#pages-22').appendChild(ulElement);
+      }
+    </script>
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
